@@ -1,0 +1,26 @@
+
+
+<h1 style="text-align: center;">Hotels</h1>
+<div class="row mt-5">
+  <div class="col-md-4 mb-3" *ngFor="let event of employees">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">{{event.hotel_name}}</h5>
+        <p class="card-text">{{event.city}}</p>
+        <a [routerLink]="['/bookhotel']" class="btn btn-primary">Book Hotel</a>
+      </div>
+      <div class="card-footer text-muted">
+        per night {{event.price}}$
+      </div>
+    </div>
+  </div>
+</div>
+
+<h1 style="text-align: center;">Bookings</h1>
+<ul>
+  <li *ngFor="let quote of booking ">
+    "{{ quote.booking_date }},{{quote.booking_start}},{{quote.booking_end}}"
+  </li>
+</ul>
+
+

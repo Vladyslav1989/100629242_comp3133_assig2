@@ -1,0 +1,85 @@
+mutation{
+  addHotel(
+    hotel_name:"Mariot",
+    city:"Toronto",
+    street:"13 John Street W",
+    postal_code:"M7B 5A2",
+    price: 202.00,   
+    
+  )
+  {
+    hotel_name
+    city
+    street
+    postal_code
+    price
+  }
+}
+
+mutation{
+  addUser(
+    username:"oleg",
+    password:"oleg123",
+    email:"oleg@gmail.com",   
+    
+  )
+  {
+    username
+  }
+}
+
+mutation{
+  BookHotel(
+   
+    username:"oleg",
+    hotel_name:"delta",
+    booking_date:"2021 02 20",
+    booking_start: "2021 05 13",
+    booking_end: "2021 06 01"
+  )
+  {
+    
+ booking_end
+
+  }
+}
+
+query{
+  getUserByName(username:"vlad")
+  {
+    email
+  }
+}
+
+query{
+  getHotelByName(hotel_name:"radison"){
+    street
+  }
+}
+
+query{
+  getBooking{
+    booking_date
+    booking_start
+    booking_end
+    
+  }
+  
+}
+
+query{
+getHotelByCity(city:"Toronto")
+  {
+    hotel_name
+  }
+}
+
+query{
+  getHotel{
+    hotel_name
+    city
+    street
+    postal_code
+    price
+  }
+}

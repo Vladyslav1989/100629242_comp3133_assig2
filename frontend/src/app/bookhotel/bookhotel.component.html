@@ -1,0 +1,24 @@
+<h2>Make Resrvation</h2>
+Hotel: <select #username>
+  <option *ngFor= "let student of employees">{{student.hotel_name}}</option>
+</select>&nbsp; <label for="start">Start date:</label>&nbsp;
+<input type="date" id="start"  #password
+       value="2021-04-09"
+       min="2021-04-10" max="2030-12-31"> &nbsp; <label for="start">End date:</label>&nbsp;
+       <input type="date" id="start"  #email
+              value="2021-04-09"
+              min="2021-04-10" max="2030-12-31">&nbsp;
+<button (click)="create(username.value ,password.value ,email.value)"> Reserv</button>
+
+
+<br/>
+<br/>
+Search Hotel: <input #search type="text" />
+<button (click)="searchr(search.value)">Search</button>
+<br/>
+<h1 style="text-align: center;">Searc Result</h1>
+<ul>
+  <li *ngFor="let quote of hotels ">
+    "{{ quote.hotel_name }}"
+  </li>
+</ul>
